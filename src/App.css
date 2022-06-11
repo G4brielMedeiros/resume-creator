@@ -1,38 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --cyan-100: #cffafe;
+  --bg-color: #2dd4bf;
+  --section-color: #5eead4;
+  --text-color: #374151;
+  --resume-theme-color: #0369a1;
+  --resume-label-color: #0c4a6e;
+  --resume-off-color: #e2e8f0;
+  font-family: Roboto, sans-serif;
+  color: var(--text-color);
+}
+
+html {
+  background-color: var(--bg-color);
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+  background-color: var(--section-color);
+  padding: 20px;
+  border-radius: 5px;
+  width: 600px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.personal-section-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#input-description {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+input,
+textarea {
+  border: none;
+  margin: 5px 5px;
+  padding: 5px 5px;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus {
+  outline: 2px solid var(--bg-color);
+}
+
+.resume {
+  width: 600px;
+  height: 800px;
+  background-color: white;
+}
+
+header {
+  height: 15%;
+  background-color: var(--resume-theme-color);
+  color: white;
+  padding-left: 20px;
+  font-size: 2em;
+  letter-spacing: 0.5px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.resume-wrapper {
+  display: flex;
+  height: 85%;
+}
+
+.resume-personal-info {
+  width: 30%;
+  height: 100%;
+  background-color: var(--resume-off-color);
+}
+
+.resume-relevant-info {
+  width: 70%;
+}
+
+h3 {
+  color: var(--resume-label-color);
+  padding: 10px 0px 10px 15px;
+  font-size: 1em;
+}
+
+.resume-title {
+  font-size: 0.5em;
+  font-weight: normal;
+  padding-left: 10px;
+}
+
+h4 {
+  padding: 0px 15px;
+  font-size: 0.8em;
+}
+
+p {
+  padding: 0px 0px 15px 15px;
+  font-size: 0.8em;
 }

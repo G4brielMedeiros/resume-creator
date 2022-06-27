@@ -1,4 +1,4 @@
-export default function Personal({ personalInfo, setPersonalInfo }) {
+export default function PersonalInput({ personalInfo, setPersonalInfo }) {
   function handleChange(event) {
     setPersonalInfo((prev) => {
       return { ...prev, [event.target.name]: event.target.value };
@@ -53,7 +53,7 @@ export default function Personal({ personalInfo, setPersonalInfo }) {
           onChange={handleChange}
         />
         <textarea
-          id="input-description"
+          id="personal-description"
           name="description"
           type="textArea"
           placeholder="Description"

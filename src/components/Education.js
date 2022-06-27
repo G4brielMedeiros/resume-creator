@@ -1,9 +1,3 @@
 export default function Education() {
-
-  return (
-    <section className="education-section">
-    
-
-    </section>
-  ) 
+  return <section className="education-section"></section>;
 }

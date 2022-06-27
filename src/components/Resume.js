@@ -1,34 +1,33 @@
-export default function Resume({personalInfo}) {
+export default function Resume({ personalInfo }) {
+  const { firstName, lastName, title, city, phoneNumber, email, description } =
+    personalInfo;
 
-  const {firstName, lastName, title, city, phoneNumber, email, description} = personalInfo
-  
-  
   return (
     <article className="resume">
-      
       <header>
-        <h1 className="resume-name">{firstName} {lastName}</h1>
+        <h1 className="resume-name">
+          {firstName} {lastName}
+        </h1>
         <h2 className="resume-title">{title}</h2>
       </header>
       <div className="resume-wrapper">
         <div className="resume-relevant-info">
-          <h3>Description</h3>
+          {description && <h3>Description</h3>}
           <p>{description}</p>
         </div>
         <aside className="resume-personal-info">
-          <h3>Personal Details</h3>
+          {(city || phoneNumber || email) && <h3>Personal Details</h3>}
 
-         {city && <h4>City</h4>}
+          {city && <h4>City</h4>}
           <p>{city}</p>
 
           {phoneNumber && <h4>Phone Number</h4>}
           <p>{phoneNumber}</p>
 
-         {email && <h4>Email</h4>}
+          {email && <h4>Email</h4>}
           <p>{email}</p>
-
         </aside>
       </div>
     </article>
-  )
+  );
 }

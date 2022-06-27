@@ -31,27 +31,31 @@ main {
 
 .personal-section-wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 10px;
 }
 
-#input-description {
+#personal-description {
   grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: 4;
 }
 
 input,
 textarea {
   border: none;
-  margin: 5px 5px;
-  padding: 5px 5px;
+  padding: 8px 5px;
   border-radius: 5px;
+  color: var(--text-color);
+  min-width: 0px;
 }
 
 textarea {
   resize: vertical;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   outline: 2px solid var(--bg-color);
 }
 
@@ -109,11 +113,62 @@ h3 {
 }
 
 h4 {
-  padding: 0px 15px;
+  padding: 0px 10px;
   font-size: 0.8em;
 }
 
 p {
-  padding: 0px 0px 15px 15px;
-  font-size: 0.8em;
+  padding: 0px 0px 10px 12px;
+  font-size: 0.7em;
+}
+
+.job-dates {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  gap: 10px;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+#job-description {
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+
+input[type="date"] {
+  height: 30px;
+  display: inline;
+}
+
+button {
+  color: var(--text-color);
+  border-radius: 20px;
+  height: 20px;
+  width: 20px;
+  border: none;
+  background-color: var(--bg-color);
+  text-align: center;
+}
+
+button:hover {
+  background-color: #14b8a6;
+}
+
+.experience-section-header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.delete-button {
+  position: absolute;
+  left: -25px;
+  top: 5px;
 }

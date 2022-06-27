@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import JobInput from "./JobInput";
 
 export default function ExperienceInput({ experience, setExperience }) {
@@ -5,7 +6,7 @@ export default function ExperienceInput({ experience, setExperience }) {
     setExperience((prev) => [
       ...prev,
       {
-        index: experience.length,
+        id: nanoid(),
         position: "",
         company: "",
         startDate: "",
@@ -14,14 +15,14 @@ export default function ExperienceInput({ experience, setExperience }) {
     ]);
   }
 
-  function setJob(newJob) {
+  function updateJob(newJob) {
     setExperience((prev) =>
-      prev.map((oldJob) => (oldJob.index === newJob.index ? newJob : oldJob))
+      prev.map((oldJob) => (oldJob.id === newJob.id ? newJob : oldJob))
     );
   }
 
-  function deleteJob(index) {
-    setExperience((prev) => prev.filter((job) => job.index !== index));
+  function deleteJob(id) {
+    setExperience((prev) => prev.filter((job) => job.id !== id));
   }
 
   return (
@@ -35,10 +36,10 @@ export default function ExperienceInput({ experience, setExperience }) {
 
       {experience.map((job) => (
         <JobInput
-          key={job.index}
+          key={job.id}
           job={job}
-          setJob={setJob}
-          deleteJob={() => deleteJob(job.index)}
+          updateJob={updateJob}
+          deleteJob={() => deleteJob(job.id)}
         />
       ))}
     </section>

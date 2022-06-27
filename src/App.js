@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import Input from "./components/Input";
+import ExperienceInput from "./components/ExperienceInput";
+import PersonalInput from "./components/PersonalInput";
 import Resume from "./components/Resume";
 
 function App() {
@@ -17,12 +18,10 @@ function App() {
 
   return (
     <div className="App">
-      <Input
-        personalInfo={personalInfo}
-        setPersonalInfo={setPersonalInfo}
-        experience={experience}
-        setExperience={setExperience}
-      />
+      <main className="input-section">
+        <PersonalInput personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} />
+        <ExperienceInput experience={experience} setExperience={setExperience} />
+      </main>
       <Resume personalInfo={personalInfo} />
     </div>
   );

@@ -1,6 +1,6 @@
-export default function JobInput({ job, setJob, deleteJob }) {
+export default function JobInput({ job, updateJob, deleteJob }) {
   function handleChange(event) {
-    setJob({ ...job, [event.target.name]: event.target.value });
+    updateJob({ ...job, [event.target.name]: event.target.value });
   }
 
   return (

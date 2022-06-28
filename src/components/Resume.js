@@ -1,6 +1,7 @@
-import JobOutput from "./JobOutput";
+import SchoolOutput from "./Education/SchoolOutput";
+import JobOutput from "./Experience/JobOutput";
 
-export default function Resume({ personalInfo, experience }) {
+export default function Resume({ personalInfo, experience, education }) {
   const { firstName, lastName, title, city, phoneNumber, email, description } =
     personalInfo;
 
@@ -20,6 +21,11 @@ export default function Resume({ personalInfo, experience }) {
           {experience.length !== 0 && <h3>Experience</h3>}
           {experience.map((job) => (
             <JobOutput key={job.id} job={job} />
+          ))}
+
+          {education.length !== 0 && <h3>Education</h3>}
+          {education.map((school) => (
+            <SchoolOutput key={school.id} school={school} />
           ))}
         </div>
 

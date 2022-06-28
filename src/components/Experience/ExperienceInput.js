@@ -27,7 +27,7 @@ export default function ExperienceInput({ experience, setExperience }) {
 
   return (
     <section className="experience-section">
-      <div className="experience-section-header">
+      <div className="section-header">
         <h2>Experience</h2>
         <button onClick={addJob} className="add">
           ✚

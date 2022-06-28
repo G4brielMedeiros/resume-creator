@@ -13,11 +13,12 @@ export default function Resume({ personalInfo, experience, education }) {
             {firstName} {lastName}
           </h1>
         )}
-        {title && <h2 className="resume-title">{title}</h2>}
+        <h2 className="resume-title">{title}</h2>
       </header>
       <div className="resume-wrapper">
         <div className="resume-relevant-info">
-          {description && <h3>Description</h3> && <p>{description}</p>}
+          {description && <h3>Description</h3>}
+          {description && <p>{description}</p>}
 
           {experience.length !== 0 && <h3>Experience</h3>}
           {experience.map((job) => (
@@ -33,11 +34,14 @@ export default function Resume({ personalInfo, experience, education }) {
         <aside className="resume-personal-info">
           {(city || phoneNumber || email) && <h3>Personal Details</h3>}
 
-          {city && <h4>City</h4> && <p>{city}</p>}
+          {city && <h4>City</h4>}
+          {city && <p>{city}</p>}
 
-          {phoneNumber && <h4>Phone Number</h4> && <p>{phoneNumber}</p>}
+          {phoneNumber && <h4>Phone Number</h4>}
+          {phoneNumber && <p>{phoneNumber}</p>}
 
-          {email && <h4>Email</h4> && <p>{email}</p>}
+          {email && <h4>Email</h4>}
+          {email && <p>{email}</p>}
         </aside>
       </div>
     </article>

@@ -29,9 +29,7 @@ export default function ExperienceInput({ experience, setExperience }) {
     <section className="experience-section">
       <div className="section-header">
         <h2>Experience</h2>
-        <button onClick={addJob} className="add">
-          ✚
-        </button>
+        <button onClick={addJob}>✚</button>
       </div>
 
       {experience.map((job) => (

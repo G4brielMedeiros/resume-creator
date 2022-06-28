@@ -28,6 +28,8 @@ main {
   padding: 20px;
   border-radius: 5px;
   width: 600px;
+  overflow: scroll;
+  height: 760px;
 }
 
 .personal-section-wrapper {
@@ -49,10 +51,6 @@ textarea {
   border-radius: 5px;
   color: var(--text-color);
   min-width: 0px;
-}
-
-input {
-  max-height: fit-content;
 }
 
 textarea {
@@ -135,11 +133,13 @@ p {
 
 .job-input {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   position: relative;
   gap: 10px;
   margin: 10px;
   margin-bottom: 20px;
+
+  grid-template-rows: auto auto 1fr;
 }
 
 .school-input {

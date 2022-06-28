@@ -27,10 +27,8 @@ export default function EducationInput({ education, setEducation }) {
   return (
     <section className="education-section">
       <div className="section-header">
-        <h2>Education</h2>
-        <button onClick={addSchool} className="add">
-          ✚
-        </button>
+        <h2>Graduation</h2>
+        <button onClick={addSchool}>✚</button>
       </div>
 
       {education.map((school) => (
@@ -41,7 +39,6 @@ export default function EducationInput({ education, setEducation }) {
           deleteSchool={() => deleteSchool(school.id)}
         />
       ))}
-
     </section>
   );
 }

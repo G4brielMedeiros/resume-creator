@@ -7,8 +7,8 @@ export default function ExperienceInput({ experience, setExperience }) {
       ...prev,
       {
         id: nanoid(),
-        position: "",
         company: "",
+        position: "",
         startDate: "",
         finishDate: "",
       },

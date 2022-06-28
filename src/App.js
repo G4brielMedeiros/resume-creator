@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import { useState } from "react";
 import "./App.css";
 import EducationInput from "./components/Education/EducationInput";
@@ -15,9 +16,24 @@ function App() {
     phoneNumber: "",
     description: "",
   });
-  const [experience, setExperience] = useState([]);
+  const [experience, setExperience] = useState([
+    {
+      id: nanoid(),
+      company: "",
+      position: "",
+      startDate: "",
+      finishDate: "",
+    },
+  ]);
 
-  const [education, setEducation] = useState([]);
+  const [education, setEducation] = useState([
+    {
+      id: nanoid(),
+      name: "",
+      degree: "",
+      graduationDate: "",
+    },
+  ]);
 
   return (
     <div className="App">

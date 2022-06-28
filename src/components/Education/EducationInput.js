@@ -27,7 +27,7 @@ export default function EducationInput({ education, setEducation }) {
   return (
     <section className="education-section">
       <div className="section-header">
-        <h2>Graduation</h2>
+        <h2>Education</h2>
         <button onClick={addSchool}>✚</button>
       </div>
 

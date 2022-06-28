@@ -144,7 +144,7 @@ p {
 
 .school-input {
   display: grid;
-  grid-template-columns: 3fr 3fr 2fr;
+  grid-template-columns: 5fr 5fr 3fr;
   position: relative;
   gap: 10px;
   margin: 10px;
@@ -180,7 +180,7 @@ button:hover {
 .delete-button {
   position: absolute;
   left: -25px;
-  top: 5px;
+  top: 6px;
 }
 
 span {

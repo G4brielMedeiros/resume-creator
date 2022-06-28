@@ -4,7 +4,7 @@ export default function JobInput({ job, updateJob, deleteJob }) {
   }
 
   return (
-    <div className="job">
+    <div className="job-input">
       <button onClick={deleteJob} className="delete-button">
         ✖
       </button>
@@ -23,7 +23,7 @@ export default function JobInput({ job, updateJob, deleteJob }) {
         value={job.position}
         onChange={handleChange}
       />
-      <div className="job-dates">
+      <div className="job-input-dates">
         <input
           id="startDate"
           name="startDate"
@@ -42,7 +42,7 @@ export default function JobInput({ job, updateJob, deleteJob }) {
       </div>
 
       <textarea
-        id="job-description"
+        id="job-input-description"
         name="description"
         type="textArea"
         placeholder="Short description"

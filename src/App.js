@@ -22,7 +22,7 @@ function App() {
         <PersonalInput personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} />
         <ExperienceInput experience={experience} setExperience={setExperience} />
       </main>
-      <Resume personalInfo={personalInfo} />
+      <Resume personalInfo={personalInfo} experience={experience} />
     </div>
   );
 }

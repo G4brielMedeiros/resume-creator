@@ -18,7 +18,8 @@ html {
 
 .App {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 40px;
   flex-wrap: wrap;
 }
 
@@ -48,6 +49,10 @@ textarea {
   border-radius: 5px;
   color: var(--text-color);
   min-width: 0px;
+}
+
+input {
+  max-height: fit-content;
 }
 
 textarea {
@@ -118,17 +123,17 @@ h4 {
 }
 
 p {
-  padding: 0px 0px 10px 12px;
+  padding: 0px 12px 10px 12px;
   font-size: 0.7em;
 }
 
-.job-dates {
+.job-input-dates {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 }
 
-.job {
+.job-input {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   position: relative;
@@ -137,14 +142,10 @@ p {
   margin-bottom: 20px;
 }
 
-#job-description {
-  grid-row-start: 2;
+#job-input-description {
+  grid-row-start: 1;
+  grid-row-end: 4;
   grid-column-start: 2;
-}
-
-input[type="date"] {
-  height: 30px;
-  display: inline;
 }
 
 button {
@@ -171,4 +172,12 @@ button:hover {
   position: absolute;
   left: -25px;
   top: 5px;
+}
+
+span {
+  font-weight: normal;
+}
+
+.job-dates {
+  font-style: italic;
 }

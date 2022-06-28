@@ -1,4 +1,6 @@
-export default function Resume({ personalInfo }) {
+import JobOutput from "./JobOutput";
+
+export default function Resume({ personalInfo, experience }) {
   const { firstName, lastName, title, city, phoneNumber, email, description } =
     personalInfo;
 
@@ -14,7 +16,13 @@ export default function Resume({ personalInfo }) {
         <div className="resume-relevant-info">
           {description && <h3>Description</h3>}
           <p>{description}</p>
+
+          {experience.length !== 0 && <h3>Experience</h3>}
+          {experience.map((job) => (
+            <JobOutput key={job.id} job={job} />
+          ))}
         </div>
+
         <aside className="resume-personal-info">
           {(city || phoneNumber || email) && <h3>Personal Details</h3>}
 

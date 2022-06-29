@@ -26,8 +26,8 @@ export default function ExperienceInput({ experience, setExperience }) {
   }
 
   return (
-    <section className="experience-section">
-      <div className="section-header">
+    <section>
+      <div className="flex items-center gap-1">
         <h2>Experience</h2>
         <button onClick={addJob}>✚</button>
       </div>

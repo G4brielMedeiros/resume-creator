@@ -1,192 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Roboto:wght@400;700&display=swap");
-
-:root {
-  --cyan-100: #cffafe;
-  --bg-color: #2dd4bf;
-  --section-color: #5eead4;
-  --text-color: #374151;
-  --resume-theme-color: #0369a1;
-  --resume-label-color: #0c4a6e;
-  --resume-off-color: #e2e8f0;
-  font-family: Roboto, sans-serif;
-  color: var(--text-color);
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html {
-  background-color: var(--bg-color);
-}
-
-.App {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-main {
-  background-color: var(--section-color);
-  padding: 20px;
-  border-radius: 5px;
-  width: 600px;
-  overflow: scroll;
-  height: 760px;
-}
-
-.personal-section-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin: 10px;
-}
-
-#personal-description {
-  grid-column-start: 1;
-  grid-column-end: 4;
+  @apply bg-teal-400;
+  font-family: Roboto, sans-serif;
 }
 
 input,
 textarea {
-  border: none;
-  padding: 8px 5px;
-  border-radius: 5px;
-  color: var(--text-color);
-  min-width: 0px;
+  @apply min-w-0 rounded-md border-none px-1 py-1 text-gray-700;
+  @apply focus:outline focus:outline-2 focus:outline-teal-400;
 }
 
-textarea {
-  resize: vertical;
-}
-
-input:focus,
-textarea:focus {
-  outline: 2px solid var(--bg-color);
-}
-
-.resume {
-  width: 600px;
-  height: 800px;
-  background-color: white;
-}
-
-header {
-  height: 15%;
-  background-color: var(--resume-theme-color);
-  color: white;
-  padding-left: 20px;
-  font-size: 2em;
-  letter-spacing: 0.5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-h1,
-h2,
-h3,
-h4,
-p {
-  margin: 0;
-}
-
-.resume-wrapper {
-  display: flex;
-  height: 85%;
-}
-
-.resume-personal-info {
-  width: 30%;
-  height: 100%;
-  background-color: var(--resume-off-color);
-}
-
-.resume-relevant-info {
-  width: 70%;
+h2 {
+  @apply text-2xl font-bold;
 }
 
 h3 {
-  color: var(--resume-label-color);
-  padding: 10px 0px 10px 15px;
-  font-size: 1em;
-}
-
-.resume-title {
-  font-size: 0.5em;
-  font-weight: normal;
-  padding-left: 10px;
+  @apply py-2 pl-4 font-bold text-sky-900;
 }
 
 h4 {
-  padding: 0px 10px;
-  font-size: 0.8em;
+  @apply py-0 px-3 text-sm font-bold;
 }
 
 p {
-  padding: 0px 12px 10px 12px;
-  font-size: 0.7em;
-}
-
-.job-input-dates {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.job-input {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  position: relative;
-  gap: 10px;
-  margin: 10px;
-  margin-bottom: 20px;
-
-  grid-template-rows: auto auto 1fr;
-}
-
-.school-input {
-  display: grid;
-  grid-template-columns: 5fr 5fr 3fr;
-  position: relative;
-  gap: 10px;
-  margin: 10px;
-  margin-bottom: 20px;
-}
-
-#job-input-description {
-  grid-row-start: 1;
-  grid-row-end: 4;
-  grid-column-start: 2;
+  @apply px-3 pb-3 text-xs;
 }
 
 button {
-  color: var(--text-color);
-  border-radius: 20px;
-  height: 20px;
-  width: 20px;
-  border: none;
-  background-color: var(--bg-color);
-  text-align: center;
-}
-
-button:hover {
-  background-color: #14b8a6;
-}
-
-.section-header {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.delete-button {
-  position: absolute;
-  left: -25px;
-  top: 6px;
-}
-
-span {
-  font-weight: normal;
-}
-
-.job-dates {
-  font-style: italic;
+  @apply h-5 w-5 rounded-full border-none bg-teal-400 text-center text-sm text-gray-700 hover:bg-teal-500;
 }

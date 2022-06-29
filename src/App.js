@@ -36,8 +36,8 @@ function App() {
   ]);
 
   return (
-    <div className="App">
-      <main className="input-section">
+    <div className="m-3 flex justify-center gap-10 text-gray-700">
+      <main className="h-[800px] w-[650px] overflow-scroll rounded-sm bg-teal-300 p-5">
         <PersonalInput personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} />
         <ExperienceInput experience={experience} setExperience={setExperience} />
         <EducationInput education={education} setEducation={setEducation} />

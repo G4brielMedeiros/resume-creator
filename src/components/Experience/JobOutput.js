@@ -18,9 +18,10 @@ export default function JobOutput({ job }) {
   return (
     <div>
       <h4>
-        {job.position} {job.company && <span>at</span>} {job.company}
+        {job.position} {job.company && <span className="font-normal">at</span>}{" "}
+        {job.company}
       </h4>
-      <p className="job-dates">
+      <p className="italic">
         {startDateString} {job.finishDate && "to"} {finishDateString}
       </p>
 

@@ -4,8 +4,8 @@ export default function SchoolInput({ school, updateSchool, deleteSchool }) {
   }
 
   return (
-    <div className="school-input">
-      <button onClick={deleteSchool} className="delete-button">
+    <div className="relative m-2 mb-5 grid grid-cols-[5fr_5fr_3fr] gap-2">
+      <button onClick={deleteSchool} className="absolute -left-6 self-center">
         ✖
       </button>
 

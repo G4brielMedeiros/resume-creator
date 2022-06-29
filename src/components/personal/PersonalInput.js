@@ -6,10 +6,10 @@ export default function PersonalInput({ personalInfo, setPersonalInfo }) {
   }
 
   return (
-    <section className="personal-section">
+    <section>
       <h2>Personal Information</h2>
 
-      <div className="personal-section-wrapper">
+      <div className="m-2 grid grid-cols-3 gap-2">
         <input
           name="firstName"
           type="text"
@@ -53,7 +53,7 @@ export default function PersonalInput({ personalInfo, setPersonalInfo }) {
           onChange={handleChange}
         />
         <textarea
-          id="personal-description"
+          className="col-start-1 col-end-4"
           name="description"
           type="textArea"
           placeholder="Description"

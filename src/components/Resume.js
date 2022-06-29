@@ -6,17 +6,17 @@ export default function Resume({ personalInfo, experience, education }) {
     personalInfo;
 
   return (
-    <article className="resume">
-      <header>
+    <article className="h-[800px] w-[600px] bg-white">
+      <header className="flex h-1/6 flex-col justify-center bg-sky-700 pl-5 tracking-wide text-white">
         {(firstName || lastName) && (
-          <h1 className="resume-name">
+          <h1 className="text-5xl font-bold">
             {firstName} {lastName}
           </h1>
         )}
-        <h2 className="resume-title">{title}</h2>
+        <h2 className="pl-3 text-base">{title}</h2>
       </header>
-      <div className="resume-wrapper">
-        <div className="resume-relevant-info">
+      <div className="flex h-5/6">
+        <div className="w-2/3">
           {description && <h3>Description</h3>}
           {description && <p>{description}</p>}
 
@@ -31,7 +31,7 @@ export default function Resume({ personalInfo, experience, education }) {
           ))}
         </div>
 
-        <aside className="resume-personal-info">
+        <aside className="h-full w-1/3 bg-slate-200">
           {(city || phoneNumber || email) && <h3>Personal Details</h3>}
 
           {city && <h4>City</h4>}

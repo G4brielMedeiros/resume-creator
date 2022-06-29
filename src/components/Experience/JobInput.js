@@ -4,8 +4,8 @@ export default function JobInput({ job, updateJob, deleteJob }) {
   }
 
   return (
-    <div className="job-input">
-      <button onClick={deleteJob} className="delete-button">
+    <div className="relative m-2 mb-5 grid grid-cols-2 grid-rows-[auto_auto_1fr] gap-2">
+      <button onClick={deleteJob} className="absolute -left-6 top-2">
         ✖
       </button>
 
@@ -23,7 +23,7 @@ export default function JobInput({ job, updateJob, deleteJob }) {
         value={job.position}
         onChange={handleChange}
       />
-      <div className="job-input-dates">
+      <div className="flex items-baseline justify-between">
         <input
           id="startDate"
           name="startDate"
@@ -31,7 +31,7 @@ export default function JobInput({ job, updateJob, deleteJob }) {
           value={job.startDate}
           onChange={handleChange}
         />
-        <label htmlFor="finishDate">to</label>
+        to
         <input
           id="finishDate"
           name="finishDate"
@@ -42,7 +42,7 @@ export default function JobInput({ job, updateJob, deleteJob }) {
       </div>
 
       <textarea
-        id="job-input-description"
+        className="col-start-2 row-start-1 row-end-4"
         name="description"
         type="textArea"
         placeholder="Short description"

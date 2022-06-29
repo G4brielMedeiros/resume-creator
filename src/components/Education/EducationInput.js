@@ -25,8 +25,8 @@ export default function EducationInput({ education, setEducation }) {
   }
 
   return (
-    <section className="education-section">
-      <div className="section-header">
+    <section>
+      <div className="flex items-center gap-1">
         <h2>Education</h2>
         <button onClick={addSchool}>✚</button>
       </div>
